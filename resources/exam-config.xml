@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="beanInit"
+       default-destroy-method="beanDestroy">
+
+
+
+    <bean id="exam" class="main.java.ru.suvovov.dependencies.Exam">
+        <property name="answerChecker">
+            <bean class="main.java.ru.suvovov.dependencies.AnswerChecker"/>
+        </property>
+
+    </bean>
+
+<!--    <bean id="message" class="main.java.suvorov.Message">-->
+<!--        <property name="message" value="Hello everybody!"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="messageToYou" class="main.java.suvorov.MessageToYou" parent="message">-->
+<!--        <property name="message" value="Hello everybody!!"/>-->
+<!--        <property name="messageToYou" value="And I am  glad to exactly You!"/>-->
+
+<!--    </bean>-->
+
+</beans>
